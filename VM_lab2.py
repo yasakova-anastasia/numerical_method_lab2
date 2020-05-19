@@ -107,7 +107,7 @@ def decision(mpb, window, l, T, h_t, h_x, b0, b1, b2, f0, f1):
         else:
             w_I = w_I + 2 * w[j]
         j = j + 1
-    w_I = w_I * h_x / 6
+    w_I = w_I * h_x / 3
     for i in range(n):
         w[i] = w[i] / w_I
     j = 0
@@ -143,7 +143,7 @@ def decision(mpb, window, l, T, h_t, h_x, b0, b1, b2, f0, f1):
             else:
                 I = I + 2 * y[k] * b[k]
             k = k + 1
-        I = I * h_x / 6
+        I = I * h_x / 3
         mpb["value"] = mpb["value"] + 1
         window.update_idletasks()
         j = j + 1
